@@ -1,0 +1,107 @@
+$font-family-base: "Poppins";
+$font-size-root: 14px;
+$headings-font-weight: 600;
+$input-btn-padding-y: 1rem;
+$border-radius: 3px;
+$light: #f0f1f3;
+$h6-font-size: 1.1428em;
+$small-font-size: 0.9285em;
+$primary: #f48f1f;
+$dark: #2e3840;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+body {
+  padding: 60px 0;
+}
+
+.text-light {
+  color: #838a8f !important;
+}
+
+.form-check {
+  border: none;
+
+  .form-check-input {
+    float: none;
+    margin-left: 0;
+  }
+
+  label {
+    width: 100%;
+  }
+}
+
+#payNowButton {
+  border-radius: 35px;
+  color: white;
+  filter: drop-shadow(5.657px 5.657px 9px rgba(0, 0, 0, 0.15));
+
+  .fa-arrow-right {
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: darken($primary, 20%);
+    transition: 0.3s;
+  }
+
+  &:hover {
+    .fa-arrow-right {
+      background-color: darken($primary, 10%);
+    }
+  }
+}
+
+#checkoutPromoNotice {
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));
+  background-image: linear-gradient(90deg, #5b135c 0%, #7f007f 100%);
+  color: white;
+
+  .fa-bell {
+    font-size: 24px;
+  }
+
+  p {
+    color: #deadde;
+  }
+}
+
+.btn-check {
+  & + .btn {
+    border-width: 1px !important;
+    border-color: transparent !important;
+
+    &:hover {
+      box-shadow: 0px 0px 0px 2px $primary inset;
+    }
+
+    .checkContainer {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1px solid darken($light, 30%);
+      transition: 0.3s;
+
+      .fa {
+        font-size: 18px;
+        opacity: 0;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  &:checked + .btn {
+    border-color: transparent;
+    box-shadow: 0px 0px 0px 2px $primary inset;
+
+    .checkContainer {
+      background-color: $primary;
+      border-color: $primary;
+
+      .fa {
+        opacity: 1;
+      }
+    }
+  }
+}

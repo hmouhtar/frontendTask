@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Checkout</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="mainForm"></form>
+      <h1 class="text-center mb-4">Checkout</h1>
+      <hr>
+      <div class="row g-4 gx-lg-5 gx-xl-4">
+        <div class="col-lg-6 col-xl-3 col-12">
+          <h4 class="text-dark">Create Login</h4>
+          <p class="text-light">Teachers & students share one login</p>
+          <div class="row g-3">
+            <div class="col-12">
+              <input required form="mainForm" class="form-control " type="text" placeholder="Username">
+            </div>
+            <div class="col-12">
+              <input required form="mainForm" class="form-control " type="password" placeholder="Enter your password">
+            </div>
+            <div class="col-12">
+              <input required form="mainForm" class="form-control" type="number" min="1000" max="9999" placeholder="Create a 4-digit PIN">
+            </div>
+          </div>
+          <p class="mt-2 text-light">PIN is for access to the manage account page.</p>
+        </div>
+        <div class="col-lg-6 col-xl-3 col-12">
+          <h4 class="text-dark">Customer Information</h4>
+          <p class="text-light">For the person/organization paying</p>
+          <div class="row g-3">
+            <div class="col-12 col-md-7">
+              <input required form="mainForm" class="form-control " type="text" placeholder="Your Name">
+            </div>
+            <div class="col-12 col-md-5">
+              <select required form="mainForm" class="form-select required form=" mainForm" text-light" name="" id="">
+                <option disabled selected required form="mainForm" value="">Librarian</option>
+                <option value="option">Option</option>
+              </select required form="mainForm">
+            </div>
+            <div class="col-12">
+              <input required form="mainForm" class="form-control" type="email" placeholder="Your Email">
+            </div>
+            <div class="col-12">
+              <input required form="mainForm" class="form-control " type="text" placeholder="School Name">
+            </div>
+            <div class="col-12">
+              <input required form="mainForm" class="form-control " type="text" placeholder="Billing Address">
+            </div>
+            <div class="col-12 col-md-4">
+              <input required form="mainForm" class="form-control " type="text" placeholder="City">
+            </div>
+            <div class="col-12 col-md-4">
+              <select required form="mainForm" class="form-select required form=" mainForm" text-light" name="" id="">
+                <option disabled selected required form="mainForm" value="">State</option>
+                <option value="option">Option</option>
+              </select required form="mainForm">
+            </div>
+            <div class="col-12 col-md-4">
+              <input required form="mainForm" class="form-control" type="text" placeholder="ZIP">
+            </div>
+          </div>
+          <p class="mt-2">
+            <a href="">Click here for international address.</a>
+          </p>
+        </div>
+        <div class="col-lg-6 col-xl-3 col-12">
+          <h4 class="text-dark">Secure Payment</h4>
+          <p class="text-light">Choose payment method below.</p>
+          <div class="row g-3">
+            <div class="col-12 d-grid">
+              <input required form="mainForm" type="radio" class="btn-check" name="options" id="card" checked autocomplete="off">
+              <label class="d-flex btn bg-light fw-semibold d-flex align-items-center text-start" for="card">
+                <span class="checkContainer d-flex align-items-center justify-content-center mx-2">
+                  <i class="fa fa-check text-white"></i>
+                </span> Credit/Debit Card </label>
+            </div>
+            <div class="col-12 d-grid">
+              <input required form="mainForm" type="radio" class="btn-check" name="options" id="purchaseOrder" autocomplete="off">
+              <label class="d-flex btn bg-light fw-semibold text-start" for="purchaseOrder">
+                <span class="checkContainer d-flex align-items-center justify-content-center mx-2">
+                  <i class="fa fa-check text-white"></i>
+                </span> Purchase Order </label>
+            </div>
+            <div class="col-12">
+              <input required form="mainForm" class="form-control" type="tel" input required form="mainForm" mode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="Card Number">
+            </div>
+            <div class="col-12 col-sm-4">
+              <input required form="mainForm" class="form-control" type="number" min="01" max="12" placeholder="MM">
+            </div>
+            <div class="col-12 col-sm-4">
+              <input required form="mainForm" class="form-control" type="number" min="1900" max="2099" step="1" placeholder="YY" />
+            </div>
+            <div class="col-12 col-sm-4">
+              <input required form="mainForm" class="form-control" type="number" step="1" placeholder="CVC" />
+            </div>
+            <div class="col-12">
+              <div class="d-grid ">
+                <button type="submit" class="d-flex justify-content-center align-items-center fs-4 fw-semibold btn btn-primary btn-block" id="payNowButton" form="mainForm">
+                  <span class="flex-grow-1">
+                    <i class="fa fa-lock me-2"></i>Pay Now </span>
+                  <i class="fa fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xl-3 col-12">
+          <div class="row gx-0 gy-3">
+            <div class="col-12 bg-light rounded py-3 px-4">
+              <p class="text-center fs-6 fw-light text-light">Order Summary</p>
+              <p class="mb-2 fs-6 fw-light text-dark">School Yearly Plan</p>
+              <p class="small text-light">This is a yearly recurring subscription paid once a year at $795. Cancel any time with 1 click on the manage account page. We send email reminders 30 days before each renewal.</p>
+              <select required form="mainForm" class="form-select required form=" mainForm" text-light" name="" id="">
+                <option disabled selected required form="mainForm" value="">1 Year @ 795 per year</option>
+                <option value="option">Option</option>
+              </select required form="mainForm">
+              <p class="mt-3 fs-6 d-flex justify-content-between text-light">Total <span class="text-dark fw-semibold">$795</span>
+              </p>
+            </div>
+            <div class="col-12">
+              <div class="d-flex g-2 bg-light rounded py-3 px-4" id="checkoutPromoNotice">
+                <i class="fa fa-bell mt-1 me-3 text-primary"></i>
+                <div class="flex-grow-1">
+                  <h6>January Promotion Applied</h6>
+                  <p class="mb-0">9 Months Free Will Be Auto-Added To Plan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
